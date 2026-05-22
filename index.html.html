@@ -690,10 +690,11 @@ function doForgotPassword() {
   if (!email) { toast('Digite seu email', 'error'); return; }
   var url = CFG.supabaseUrl.replace(/\/$/, '') + '/auth/v1/recover';
   var key = CFG.supabaseKey;
+  var redirectTo = 'https://darionicolaslanata.github.io/finan-asos';
   fetch(url, {
     method: 'POST',
     headers: {'Content-Type':'application/json','apikey':key},
-    body: JSON.stringify({email: email})
+    body: JSON.stringify({email: email, redirect_to: redirectTo})
   }).then(function() {
     toast('Email enviado! Verifique sua caixa de entrada.', 'success');
     setTimeout(function() { showForgot(false); }, 2000);
