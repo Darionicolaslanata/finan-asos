@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  // Redireciona para index.html mantendo hash e parametros
+  var base = window.location.origin + '/finan-asos/';
+  var hash = window.location.hash;
+  var search = window.location.search;
+  var extra = search || hash || '';
+  window.location.replace(base + 'index.html' + extra);
+</script>
+</head>
+<body></body>
+</html>
