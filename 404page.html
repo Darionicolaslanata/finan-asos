@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  // Redireciona para index.html mantendo hash e parametros
+  var url = window.location.href;
+  var base = window.location.origin + '/financeos/';
+  var rest = url.replace(base, '');
+  window.location.replace(base + 'index.html?' + encodeURIComponent(rest));
+</script>
+</head>
+<body></body>
+</html>
